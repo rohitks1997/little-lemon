@@ -1,10 +1,16 @@
 /* src/App.css */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+.main-content {
   padding: 20px;
-  color: white;
+  margin-top: 60px; /* To ensure the main content is below the fixed header */
+  margin-bottom: 60px; /* To ensure the main content is above the fixed footer */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }

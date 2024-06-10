@@ -28,41 +28,41 @@ const BookingForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <div>
+    <form onSubmit={formik.handleSubmit} className="booking-form">
+      <div className="form-group">
         <label htmlFor="name">Name</label>
         <input id="name" type="text" {...formik.getFieldProps('name')} />
-        {formik.touched.name && formik.errors.name ? <div>{formik.errors.name}</div> : null}
+        {formik.touched.name && formik.errors.name ? <div className="error">{formik.errors.name}</div> : null}
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="email">Email</label>
         <input id="email" type="email" {...formik.getFieldProps('email')} />
-        {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
+        {formik.touched.email && formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="phone">Phone</label>
         <input id="phone" type="text" {...formik.getFieldProps('phone')} />
-        {formik.touched.phone && formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+        {formik.touched.phone && formik.errors.phone ? <div className="error">{formik.errors.phone}</div> : null}
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="date">Date</label>
         <input id="date" type="date" {...formik.getFieldProps('date')} />
-        {formik.touched.date && formik.errors.date ? <div>{formik.errors.date}</div> : null}
+        {formik.touched.date && formik.errors.date ? <div className="error">{formik.errors.date}</div> : null}
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="time">Time</label>
         <input id="time" type="time" {...formik.getFieldProps('time')} />
-        {formik.touched.time && formik.errors.time ? <div>{formik.errors.time}</div> : null}
+        {formik.touched.time && formik.errors.time ? <div className="error">{formik.errors.time}</div> : null}
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="guests">Number of Guests</label>
         <input id="guests" type="number" {...formik.getFieldProps('guests')} />
-        {formik.touched.guests && formik.errors.guests ? <div>{formik.errors.guests}</div> : null}
+        {formik.touched.guests && formik.errors.guests ? <div className="error">{formik.errors.guests}</div> : null}
       </div>
 
       <button type="submit">Submit</button>
